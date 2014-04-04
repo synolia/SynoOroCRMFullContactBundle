@@ -1,0 +1,5 @@
+synolia:
+    fullcontact:
+        contacts:
+            success.message:    "FullContact data successfully fetched"
+            error.message:      "FullContact API: Usage limits exceeded or API key missing/invalid"

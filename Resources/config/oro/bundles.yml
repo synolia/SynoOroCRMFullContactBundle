@@ -1,0 +1,2 @@
+bundles:
+    - { name: Synolia\Bundle\FullContactBundle\SynoliaFullContactBundle, priority: 100 }

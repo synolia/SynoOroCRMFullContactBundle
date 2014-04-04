@@ -1,0 +1,7 @@
+services:
+    synolia.fullcontact.listener:
+        class: Synolia\Bundle\FullContactBundle\Listener\FullContact
+        calls:
+            - [ setContainer, [ @service_container ] ]
+        tags:
+            - { name: doctrine.event_listener, event: onFlush }

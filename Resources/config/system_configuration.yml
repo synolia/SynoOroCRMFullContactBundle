@@ -1,0 +1,24 @@
+oro_system_configuration:
+    groups:
+        services:
+            icon:   icon-globe
+            title:  'Services'
+        fullcontact_settings:
+            title:  'FullContact API'
+    fields:
+        synolia_full_contact.api_key:
+            type: text
+            options:
+                resettable: false
+                label: 'API Key'
+    tree:
+        system_configuration:
+            platform:
+                children:
+                    general_setup:
+                        children:
+                            services:
+                                children:
+                                    fullcontact_settings:
+                                        children:
+                                            - synolia_full_contact.api_key

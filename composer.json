@@ -1,0 +1,22 @@
+{
+    "name": "synolia/syno-orocrm-fullcontact",
+    "description": "OroCRM Package, FullContact API for Contact entities",
+    "homepage": "https://github.com/synolia/SynoFullContactBundle.git",
+    "license": "OSL-3.0",
+    "authors": [{
+        "name": "Synolia",
+        "homepage": "http://www.synolia.com"
+    }],
+    "autoload": {
+        "psr-0": {
+            "Synolia\\Bundle\\FullContactBundle": "src/"
+        }
+    },
+    "target-dir": "src/Synolia/Bundle/FullContactBundle",
+    "require": {
+        "php": ">=5.4.4",
+        "oro/platform": "1.0.*",
+        "oro/crm": "1.0.*"
+    },
+    "minimum-stability": "stable"
+}
