@@ -19,7 +19,7 @@ SynoFullContactBundle requires OroPlatform(BAP), OroCRM and PHP 5.4.4 or above.
 Installation
 ------------
 
-**Package is available through Oro Package Manager**, you can install it with the following extension key : synolia/syno-orocrm-fullcontact. 
+**Package is available through Oro Package Manager**, you can install it with the following extension key : ```synolia/syno-orocrm-fullcontact```. 
 
 For development purposes it might be cloned from github repository directly.
 
@@ -41,7 +41,7 @@ Use as dependency in composer
 -----------------------------
 
 ```yaml
-    "require": {
-        "synolia/syno-orocrm-fullcontact": "dev-master",
-    }
+"require": {
+    "synolia/syno-orocrm-fullcontact": "dev-master",
+}
 ```
