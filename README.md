@@ -21,6 +21,12 @@ Installation
 
 **Package is available through Oro Package Manager**, you can install it with the following extension key : ```synolia/syno-orocrm-fullcontact```. 
 
+You can install this package via the OroCRM interface or whit the Oro Command line:
+```bash
+php app/console oro:package:install synolia/syno-orocrm-fullcontact
+```
+
+
 For development purposes it might be cloned from github repository directly.
 
 ```bash
