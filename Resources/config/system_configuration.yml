@@ -8,6 +8,7 @@ oro_system_configuration:
     fields:
         synolia_full_contact.api_key:
             type: text
+            data_type: string
             options:
                 resettable: false
                 label: 'API Key'
