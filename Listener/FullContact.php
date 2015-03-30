@@ -34,11 +34,7 @@ class FullContact extends ContainerAware
             if($entity->isPrimary()) {
                 $owner = $entity->getOwner();
                 $this->addFullContactInfos($owner, $entity->getEmail());
-
-                // Force persist
                 $em->persist($owner);
-                $md = $em->getClassMetadata(get_class($owner));
-                $uow->computeChangeSet($md, $owner);
             }
         }
     }
