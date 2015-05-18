@@ -4,7 +4,8 @@ namespace Synolia\Bundle\FullContactBundle\Services\FullContact;
 
 use Synolia\Bundle\FullContactBundle\Services\FullContact;
 
-class Person extends FullContact {
+class Person extends FullContact
+{
 
     /**
      * Supported lookup methods
@@ -50,9 +51,12 @@ class Person extends FullContact {
 
     public function getTwitterId()
     {
-        if(isset($this->responseObject->socialProfiles->twitter)) {
+        if (isset($this->responseObject->socialProfiles->twitter)) {
             $firstElement = $this->responseObject->socialProfiles->twitter[0];
-            return $firstElement->username;
+
+            if (property_exists($firstElement, 'username')) {
+                return $firstElement->username;
+            }
         }
 
         return null;
@@ -60,9 +64,14 @@ class Person extends FullContact {
 
     public function getFacebookId()
     {
-        if($facebook = isset($this->responseObject->socialProfiles->facebook)) {
+        if ($facebook = isset($this->responseObject->socialProfiles->facebook)) {
             $firstElement = $this->responseObject->socialProfiles->facebook[0];
-            return $firstElement->id;
+
+            if (property_exists($firstElement, 'id')) {
+                return $firstElement->id;
+            } elseif (property_exists($firstElement, 'username')) {
+                return $firstElement->username;
+            }
         }
 
         return null;
@@ -70,9 +79,12 @@ class Person extends FullContact {
 
     public function getGooglePlusId()
     {
-        if($googlePlus = isset($this->responseObject->socialProfiles->googleplus)) {
+        if ($googlePlus = isset($this->responseObject->socialProfiles->googleplus)) {
             $firstElement = $this->responseObject->socialProfiles->googleplus[0];
-            return $firstElement->id;
+
+            if (property_exists($firstElement, 'id')) {
+                return $firstElement->id;
+            }
         }
 
         return null;
@@ -80,11 +92,14 @@ class Person extends FullContact {
 
     public function getLinkedInId()
     {
-        if($linkedIn = isset($this->responseObject->socialProfiles->linkedin)) {
+        if ($linkedIn = isset($this->responseObject->socialProfiles->linkedin)) {
             $firstElement = $this->responseObject->socialProfiles->linkedin[0];
-            return $firstElement->username;
+
+            if (property_exists($firstElement, 'username')) {
+                return $firstElement->username;
+            }
         }
 
         return null;
     }
-} 
+}
